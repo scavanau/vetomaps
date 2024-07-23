@@ -1,0 +1,7 @@
+Executable = run_jetveto_eff.sh
+log = run_log.log
+output = run_outfile.txt
+error = run_errors.txt
+should_transfer_files = Yes
+when_to_transfer_output = ON_EXIT
+queue
