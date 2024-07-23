@@ -1,8 +1,8 @@
 Universe = vanilla
 Executable = run_jetveto_eff.sh
-log = run_log.log
-output = run_outfile.txt
-error = run_errors.txt
+log = work/run_log.log
+output = work/run_outfile.txt
+error = work/run_errors.txt
 should_transfer_files = Yes
 when_to_transfer_output = ON_EXIT
 
