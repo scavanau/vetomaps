@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import uproot
 import correctionlib
 import awkward as ak
