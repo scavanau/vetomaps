@@ -65,18 +65,18 @@ plt.axvline(x=l1, color='red', linestyle='-')
 plt.axvline(x=l2, color='red', linestyle='-')
 plt.grid()
 plt.legend()
-plt.savefig('/eos/user/s/scavanau/SWAN_projects/JetVeto/22_vs_22EE_vetoeff', format='pdf')
+plt.savefig('/eos/user/s/scavanau/SWAN_projects/JetVeto/output/22_vs_22EE_vetoeff', format='pdf')
 
 #22
 plt.plot(pt_values_22, efficiencies, marker='.', color='black', label='22')
 plt.xlabel('Jet $p_T$')
 plt.ylabel('Efficiency')
 plt.title('Jet Veto Efficiency vs $p_T$ (22)')
-plt.savefig('/eos/user/s/scavanau/SWAN_projects/JetVeto/22_vetoeff', format='pdf')
+plt.savefig('/eos/user/s/scavanau/SWAN_projects/JetVeto/output/22_vetoeff', format='pdf')
 
 #22EE
 plt.plot(pt_values_22EE, efficienciesEE, marker='.', color='blue', label='22EE')
 plt.xlabel('Jet $p_T$')
 plt.ylabel('Efficiency')
 plt.title('Jet Veto Efficiency vs $p_T$ (22EE)')
-plt.savefig('/eos/user/s/scavanau/SWAN_projects/JetVeto/22EE_vetoeff', format='pdf')
+plt.savefig('/eos/user/s/scavanau/SWAN_projects/JetVeto/output/22EE_vetoeff', format='pdf')
