@@ -156,7 +156,7 @@ plot_histograms(bins, combined_histograms['puppimet_pt'], combined_weighted_hist
 #Uncomment to get efficiencies of each sample
 # Plot individual efficiencies
 for i, (file, xsec) in enumerate(files):
-    pt_range, efficiencies, weight, veto_pt, evnumb, cleaned_jet_pt, puppimet_pt = results[i]
+    pt_range, efficiencies, weight, veto_pt, evnumb, cleaned_jet_pt, puppimet_pt, cleaned_jet_eta = results[i]
     pt_max = 200
     if '200to400' in file:
         pt_max = 400
@@ -175,7 +175,7 @@ combined_efficiencies_unweighted = np.zeros_like(common_pt_range, dtype=float)
 
 total_weighted_events = np.sum([weight * evnumb for weight, evnumb in zip(weights, [r[4] for r in results])])
 
-for pt_range, efficiencies, weight, _, evnumb, _, _ in results:
+for pt_range, efficiencies, weight, _, evnumb, _, _, _ in results:
     interp_func = interp1d(pt_range, efficiencies, bounds_error=False, fill_value="extrapolate")
     interpolated_efficiencies = interp_func(common_pt_range)
 
