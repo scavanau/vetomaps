@@ -66,7 +66,7 @@ def plot_histograms(bins, combined_hist, combined_weighted_hist, title, path):
     ax.legend()
     ax.set_yscale('log')
     plt.savefig(path, format='png')
-
+    plt.close()
 
 #Uncomment to run function to plot individual efficiencies
 #Function to plot individual efficiencies
@@ -83,8 +83,8 @@ def plot_histograms(bins, combined_hist, combined_weighted_hist, title, path):
 
 
 # Function to plot combined efficiencies
-def plot_combined(pt, combined_eff, title, color='b', pt_min=None, pt_max=None):
-    plt.plot(pt, combined_eff, marker='.', color=color, label='Zto2Nu')
+def plot_combined(pt, combined_eff, title, path, pt_min=None, pt_max=None):
+    plt.plot(pt, combined_eff, marker='.', color='b', label='Zto2Nu')
     plt.xlabel('Jet $p_T$ [GeV]')
     plt.ylabel('Efficiency')
     plt.title(title)
@@ -94,11 +94,12 @@ def plot_combined(pt, combined_eff, title, color='b', pt_min=None, pt_max=None):
     plt.legend()
     if pt_min is not None or pt_max is not None:
         plt.xlim(pt_min, pt_max)
-    plt.savefig('/eos/user/s/scavanau/SWAN_projects/JetVeto/output/23Bpix_vetoeff_weighted.png', format='png')
+    plt.savefig(path, format='png')
+    plt.close()
 
 # Function to plot combined efficiencies with out weights
-def plot_combined_unweighted(pt, combined_eff, title, color='r', pt_min=None, pt_max=None):
-    plt.plot(pt, combined_eff, marker='.', color=color, label='Unweighted Efficiency')
+def plot_combined_unweighted(pt, combined_eff, title, path, pt_min=None, pt_max=None):
+    plt.plot(pt, combined_eff, marker='.', color='r', label='Unweighted Efficiency')
     plt.xlabel('Jet $p_T$ [GeV]')
     plt.ylabel('Efficiency')
     plt.title(title)
@@ -108,7 +109,8 @@ def plot_combined_unweighted(pt, combined_eff, title, color='r', pt_min=None, pt
     plt.legend()
     if pt_min is not None or pt_max is not None:
         plt.xlim(pt_min, pt_max)
-    plt.savefig('/eos/user/s/scavanau/SWAN_projects/JetVeto/output/23Bpix_vetoeff_unweighted.png', format='png')
+    plt.savefig(path, format='png')
+    plt.close()
 
 # Initialize histograms
 bins = np.linspace(0, 1000, 50)
@@ -141,8 +143,8 @@ combined_weighted_histograms = {key: np.zeros_like(bins[:-1], dtype=float) for k
 
 for hist_type in histograms.keys():
     for hist, weight in zip(histograms[hist_type], weights):
-        combined_histograms[hist_type] += hist
-        combined_weighted_histograms[hist_type] += hist * weight
+        combined_histograms[hist_type] += np.asarray(hist)
+        combined_weighted_histograms[hist_type] += np.asarray(hist) * weight
 
 # Plot combined histograms for different variable
 # If adding other histograms need to update run function and add to return variables
