@@ -47,7 +47,7 @@ files23BPix = [
 ]
 lumi= 1
 
-def plot_combined(pt, combined_eff, title, color='b', pt_min=None, pt_max=None, path):
+def plot_combined(pt, combined_eff, title, path, color='b', pt_min=None, pt_max=None):
     '''
     This plots each file normalized for ONE era.
     The file path needs to be changed before running if saving somewhere different.
@@ -117,7 +117,7 @@ for pt_range, efficiencies, scaled_weights, evnumb in results22:
     combined_efficiencies22 += np.interp(common_pt_range, pt_range, efficiencies) * np.sum(scaled_weights * evnumb)
 # Normalize combined efficiency
 combined_efficiencies22 /= total_weighted_events
-#plot_combined(common_pt_range, combined_efficiencies22, 'Zto2NuSummer22 Jet Veto Efficiency (Combined)', pt_min=0, pt_max=100, '/eos/user/s/scavanau/SWAN_projects/JetVeto/Git/22.png')
+#plot_combined(common_pt_range, combined_efficiencies22, 'Zto2NuSummer22 Jet Veto Efficiency (Combined)', '/eos/user/s/scavanau/SWAN_projects/JetVeto/Git/22.png', pt_min=0, pt_max=100)
 
 #Storing data for 22EE
 results22EE = [run(file, xsec, lumi) for file, xsec in files22EE]
@@ -130,7 +130,7 @@ for pt_range, efficiencies, scaled_weights, evnumb in results22EE:
     combined_efficiencies22EE += np.interp(common_pt_range, pt_range, efficiencies) * np.sum(scaled_weights * evnumb)
 # Normalize combined efficiency
 combined_efficiencies22EE /= total_weighted_events
-#plot_combined(common_pt_range, combined_efficiencies22EE, 'Zto2NuSummer22EE Jet Veto Efficiency (Combined)', pt_min=0, pt_max=100, '/eos/user/s/scavanau/SWAN_projects/JetVeto/Git/22EE.png')
+#plot_combined(common_pt_range, combined_efficiencies22EE, 'Zto2NuSummer22EE Jet Veto Efficiency (Combined)', '/eos/user/s/scavanau/SWAN_projects/JetVeto/Git/22EE.png', pt_min=0, pt_max=100)
 
 #Storing data for 23
 results23 = [run(file, xsec, lumi) for file, xsec in files23]
@@ -143,7 +143,7 @@ for pt_range, efficiencies, scaled_weights, evnumb in results23:
     combined_efficiencies23 += np.interp(common_pt_range, pt_range, efficiencies) * np.sum(scaled_weights * evnumb)
 # Normalize combined efficiency
 combined_efficiencies23 /= total_weighted_events
-#plot_combined(common_pt_range, combined_efficiencies23, 'Zto2NuSummer23 Jet Veto Efficiency (Combined)', pt_min=0, pt_max=100, '/eos/user/s/scavanau/SWAN_projects/JetVeto/Git/23.png')
+#plot_combined(common_pt_range, combined_efficiencies23, 'Zto2NuSummer23 Jet Veto Efficiency (Combined)', '/eos/user/s/scavanau/SWAN_projects/JetVeto/Git/23.png', pt_min=0, pt_max=100)
 
 #Storing data for 23BPix
 results23BPix = [run(file, xsec, lumi) for file, xsec in files23BPix]
@@ -156,10 +156,9 @@ for pt_range, efficiencies, scaled_weights, evnumb in results23BPix:
     combined_efficiencies23BPix += np.interp(common_pt_range, pt_range, efficiencies) * np.sum(scaled_weights * evnumb)
 # Normalize combined efficiency
 combined_efficiencies23BPix /= total_weighted_events
-#plot_combined(common_pt_range, combined_efficiencies23BPix, 'Zto2NuSummer23BPix Jet Veto Efficiency (Combined)', pt_min=0, pt_max=100, '/eos/user/s/scavanau/SWAN_projects/JetVeto/Git/23BPix.png')
+#plot_combined(common_pt_range, combined_efficiencies23BPix, 'Zto2NuSummer23BPix Jet Veto Efficiency (Combined)', '/eos/user/s/scavanau/SWAN_projects/JetVeto/Git/23BPix.png', pt_min=0, pt_max=100)
 
-
-def plot_all(pt_range, efficiencies_list, labels, title, pt_min=0, pt_max=100, path):
+def plot_all(pt_range, efficiencies_list, labels, title, path, pt_min=0, pt_max=100):
     '''
     This function plots the normalized efficiency plot for all eras on the same graph
     '''
@@ -190,7 +189,7 @@ efficiencies_list = [
     combined_efficiencies23,
     combined_efficiencies23BPix
 ]
-plot_all(common_pt_range, efficiencies_list, labels, 'Jet Veto Efficiency All Eras', pt_min=0, pt_max=100, '/eos/user/s/scavanau/SWAN_projects/JetVeto/Git/All.png')
+#plot_all(common_pt_range, efficiencies_list, labels, 'Jet Veto Efficiency All Eras', '/eos/user/s/scavanau/SWAN_projects/JetVeto/Git/All.png', pt_min=0, pt_max=100)
 
 
 #Plotting with ROOT the graph with all eras efficiencies
