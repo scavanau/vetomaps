@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import ROOT
 import uproot
 import awkward as ak
 import numpy as np
