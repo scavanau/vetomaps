@@ -7,44 +7,44 @@ import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 
 files22 = [
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22_100to200_1J.root', 87.89),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22_100to200_2J.root', 101.4),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22_200to400_1J.root', 6.319),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22_200to400_2J.root', 13.81),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22_400to600_1J.root', 0.2154),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22_400to600_2J.root', 0.833),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22_600_1J.root', 0.02587),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22_600_2J.root', 0.1574)
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22_100to200_1J.root', 87.89),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22_100to200_2J.root', 101.4),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22_200to400_1J.root', 6.319),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22_200to400_2J.root', 13.81),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22_400to600_1J.root', 0.2154),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22_400to600_2J.root', 0.833),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22_600_1J.root', 0.02587),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22_600_2J.root', 0.1574)
 ]
 files22EE = [
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22EE_100to200_1J.root', 87.89),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22EE_100to200_2J.root', 101.4),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22EE_200to400_1J.root', 6.319),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22EE_200to400_2J.root', 13.81),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22EE_400to600_1J.root', 0.2154),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22EE_400to600_2J.root', 0.833),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22EE_600_1J.root', 0.02587),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer22EE_600_2J.root', 0.1574)
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22EE_100to200_1J.root', 87.89),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22EE_100to200_2J.root', 101.4),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22EE_200to400_1J.root', 6.319),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22EE_200to400_2J.root', 13.81),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22EE_400to600_1J.root', 0.2154),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22EE_400to600_2J.root', 0.833),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22EE_600_1J.root', 0.02587),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer22EE_600_2J.root', 0.1574)
 ]
 files23 = [
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23_100to200_1J.root', 87.89),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23_100to200_2J.root', 101.4),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23_200to400_1J.root', 6.319),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23_200to400_2J.root', 13.81),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23_400to600_1J.root', 0.2154),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23_400to600_2J.root', 0.833),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23_600_1J.root', 0.02587),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23_600_2J.root', 0.1574)
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23_100to200_1J.root', 87.89),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23_100to200_2J.root', 101.4),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23_200to400_1J.root', 6.319),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23_200to400_2J.root', 13.81),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23_400to600_1J.root', 0.2154),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23_400to600_2J.root', 0.833),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23_600_1J.root', 0.02587),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23_600_2J.root', 0.1574)
 ]
 files23BPix = [
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23BPix_100to200_1J.root', 87.89),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23BPix_100to200_2J.root', 101.4),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23BPix_200to400_1J.root', 6.319),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23BPix_200to400_2J.root', 13.81),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23BPix_400to600_1J.root', 0.2154),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23BPix_400to600_2J.root', 0.833),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23BPix_600_1J.root', 0.02587),
-    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/Run3Summer23BPix_600_2J.root', 0.1574)
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23BPix_100to200_1J.root', 87.89),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23BPix_100to200_2J.root', 101.4),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23BPix_200to400_1J.root', 6.319),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23BPix_200to400_2J.root', 13.81),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23BPix_400to600_1J.root', 0.2154),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23BPix_400to600_2J.root', 0.833),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23BPix_600_1J.root', 0.02587),
+    ('/eos/user/s/scavanau/SWAN_projects/JetVeto/Zto2Nu/andreas_updates/for_phietascan/Run3Summer23BPix_600_2J.root', 0.1574)
 ]
 lumi= 1
 
